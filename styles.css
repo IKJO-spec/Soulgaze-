@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #02031D, #000000);
+    color: #ACECEE;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    font-size: 2rem;
+    font-family:  "Creepster", system-ui;
+}
+
+/* Slideshow Styles */
+.slideshow {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    margin-top: 10px;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.slideshow img {
+    width: 250px;
+    height: 150px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+/* Animation for smooth scrolling */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    height: auto;
+}
+
+.image-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.download-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ACECEE;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.download-btn:hover {
+    background: #88D4EE;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;  /* Image won't be larger than its container */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+/* Image container layout */
+.image-container{
+    display: flex;
+    flex-wrap: wrap; /* Wrap images on smaller screens */
+    justify-content: center; /* Center images */
+    gap: 10px; /* Space between images */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    header {
+        font-size: 2.5rem; /* Reduce font size for small screens */
+        text-align: center;
+    }
+    .image-container{
+        flex-direction: column; /* Stack images in a column */
+        align-items: center; /* Center images */
+    }
+}
+
